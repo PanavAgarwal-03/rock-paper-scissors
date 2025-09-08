@@ -44,7 +44,7 @@ body{
 }
 
 .reset-button{
-    background-color: red;
+    background-color:rgb(31, 128, 245);
     font-size: 20px;
     border : none;
     cursor: pointer;
