@@ -9,6 +9,7 @@ updateScore();
 
 function updateScore(){
     scoreText.innerHTML = `Wins: ${score.win} Loses: ${score.lose} Ties: ${score.tie}`;
+    localStorage.setItem("score" , JSON.stringify(score));
 }
 
 function playGame(playerMove){
@@ -35,7 +36,6 @@ function updateMoves(playerMove , computerMove){
     const currentMove = document.getElementById('current-moves');
     currentMove.innerHTML = `you <img src="img/${playerMove}-emoji.png" class='move'> <img src="img/${computerMove}-emoji.png" class='move'> Panav`;
     
-    localStorage.setItem("score" , JSON.stringify(score));
 }
 
 function getComputerMove(){
