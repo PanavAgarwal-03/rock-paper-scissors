@@ -43,9 +43,13 @@ body{
     font-size: 30px;
 }
 
-.reset-button{
+.reset-button , .auto-play-button{
     background-color:rgb(31, 128, 245);
     font-size: 20px;
     border : none;
     cursor: pointer;
+}
+
+.auto-play-button-playing{
+    background-color: green;
 }

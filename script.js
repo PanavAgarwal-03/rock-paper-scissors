@@ -88,6 +88,22 @@ function getResult(playerMove , computerMove){
         }
     }
 }
+let intervalId = null;
+
+function startAutoPlay(){
+    const autoPlayButton = document.getElementById('auto-play-button');
+    if(intervalId===null){
+        playGame(getComputerMove());
+        intervalId = setInterval(function(){playGame(getComputerMove())} , 1000);
+        autoPlayButton.classList.add('auto-play-button-playing');
+    }
+    else{
+        clearInterval(intervalId);
+        intervalId = null;
+        autoPlayButton.classList.remove('auto-play-button-playing');
+
+    }
+}
 
 
 function resetScore(){
